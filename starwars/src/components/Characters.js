@@ -10,7 +10,8 @@ const Characters = () => {
     useEffect(() => {
         axios
         .get(
-            "https://swapi.co/api/people/"
+            // "https://swapi.co/api/people/"
+            "https://henry-mock-swapi.herokuapp.com/api"
         )
             .then(data => {
                 console.log(data.data.results)

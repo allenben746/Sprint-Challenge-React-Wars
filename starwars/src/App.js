@@ -5,22 +5,25 @@ import './App.css';
 import styled from 'styled-components';
 
 const CharacterShowcaseStyle = styled.div`
+
 .mainContainer {
   display: flex;
   justify-content: center;
-  padding: 10% 0% 10% 0%;
+  padding: 10% 0 0 0;
+
+  
 }
 
 .CharacterContainer {
   width: 55%;
   height: 40%;
   border: solid;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   
 }
-
 `
 
 const App = () => {
@@ -32,9 +35,10 @@ const App = () => {
   // sync up with, if any.
 
   return (
-    <div>
-     <CharacterShowcaseStyle><Character /></CharacterShowcaseStyle>
-    </div>
+
+      <div>
+      <CharacterShowcaseStyle><Character /></CharacterShowcaseStyle>
+      </div>
   );
 }
 

@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
 
 const Character = () => {
 
-    const [character, setCharacter] = useState([]);
+    const [characterName, setCharacterName] = useState([]);
 
     useEffect(() => {
         axios
         .get(
-            "https://swapi.co/api/people/1/"
+            "https://swapi.co/api/people/"
         )
             .then(data => {
-                console.log(data)
+                const characterObject = data.data.results
+                console.log(characterObject)
                 console.log("Data fetched successfully.")
             }
             )

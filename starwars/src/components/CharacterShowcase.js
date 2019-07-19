@@ -8,8 +8,8 @@ const CharacterShowcase = (props) => {
     <div className = "mainContainer">
       <div className="CharacterContainer">
           <p className="name">{character.name}</p>
-          <p className="height">{character.height}</p>
-          <p className="mass">{character.mass}</p>
+          <p className="height">{character.height} inches</p>
+          <p className="mass">{character.mass} kilograms</p>
       </div>
     </div>
     

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import CharacterShowcase from "./CharacterShowcase";
 
 
-const Character = () => {
+const Characters = () => {
 
-    const [characterName, setCharacterName] = useState([]);
+    const [characterList, setCharacterList] = useState([]);
 
     useEffect(() => {
         axios
@@ -12,20 +13,26 @@ const Character = () => {
             "https://swapi.co/api/people/"
         )
             .then(data => {
-                const characterObject = data.data.results
-                console.log(characterObject)
-                console.log("Data fetched successfully.")
+                console.log(data.data.results)
+                setCharacterList(data.data.results)
             }
             )
             .catch(() =>
             console.log('Error in fetching server data.'))
             }, [])
-
+            console.log("Character List ->", characterList)
     return (
-      <div>Axios div.</div>
+        <div> {
+            characterList.map((character) => {
+              return <CharacterShowcase character= {character} />
+            }
+      
+            )}
+      
+          </div>
     );
 
     
   };
 
-export default Character;
+export default Characters;

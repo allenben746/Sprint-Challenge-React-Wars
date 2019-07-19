@@ -1,6 +1,5 @@
 import React from "react";
 
-import './showcase.css'
 
 
 const CharacterShowcase = (props) => {

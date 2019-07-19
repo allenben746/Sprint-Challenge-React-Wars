@@ -1,0 +1,19 @@
+
+
+/* I type the css in here for copy/paste purposes.
+It's easier to type in a css file because it auto completes. */
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10% 0% 10% 0%;
+}
+
+.CharacterContainer {
+    width: 55%;
+    height: 40%;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
